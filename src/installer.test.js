@@ -39,7 +39,6 @@ describe('installer', () => {
         if (process.platform === 'darwin') {
             expect(process.env[options.javaHome]).toBe(join(toolPath, '/Contents/Home'));
         } else {
-            expect(existsSync(join(TEMP_DIR, `graalvm-ce-java${javaVersion}-${graalvmVersion}`))).toBeTruthy();
             expect(process.env[options.javaHome]).toBe(toolPath);
         }
 
