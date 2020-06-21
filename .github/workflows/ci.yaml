@@ -29,6 +29,8 @@ jobs:
         run: npm test
       - name: Upload coverage report to Codecov
         run: npm run codecov
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Run SonarCloud scanner
         uses: sonarsource/sonarcloud-github-action@master
         env:
