@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Windows
+$RECYCLE.BIN/
+Thumbs.db
+[Dd]esktop.ini
+*.lnk
+
+# JetBrains
+.idea/
+*.iml
+
+# Node.js
+!node_modules/
+
+# Coverage
+coverage/
+
+# Generated
+cache/
+temp/
+*.log*

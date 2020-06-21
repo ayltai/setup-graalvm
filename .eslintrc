@@ -1,0 +1,65 @@
+{
+    "extends"       : [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
+    "env"           : {
+        "es6"  : true,
+        "node" : true
+    },
+    "globals"       : {
+        "Atomics"           : "readonly",
+        "SharedArrayBuffer" : "readonly"
+    },
+    "parser"        : "babel-eslint",
+    "parserOptions" : {
+        "ecmaVersion" : 2019,
+        "sourceType"  : "module"
+    },
+    "plugins"       : [
+        "async-await",
+        "es6-recommended",
+        "import",
+        "node",
+        "standard"
+    ],
+    "rules"         : {
+        "array-bracket-spacing" : [
+            "error",
+            "always"
+        ],
+        "comma-dangle"    : [
+            "error",
+            {
+                "arrays"    : "always",
+                "exports"   : "always",
+                "functions" : "never",
+                "imports"   : "always",
+                "objects"   : "always"
+            }
+        ],
+        "indent"          : [
+            "error",
+            4,
+            {
+                "SwitchCase" : 1
+            }
+        ],
+        "key-spacing"     : "off",
+        "linebreak-style" : [
+            "error",
+            "unix"
+        ],
+        "no-multi-spaces" : "off",
+        "no-undef"        : "off",
+        "quotes"          : [
+            "error",
+            "single"
+        ],
+        "semi"            : [
+            "error",
+            "always"
+        ]
+    }
+}

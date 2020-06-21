@@ -1,0 +1,16 @@
+name: Setup GraalVM
+description: Set up a specific version of GraalVM and add the command line tools to PATH
+author: Alan Tai
+inputs:
+  java-version:
+    description: The JDK version to be installed with GraalVM. E.g. 8, 11. See https://github.com/graalvm/graalvm-ce-builds/releases
+  graalvm-version:
+    description: The version of GraalVM to make available on PATH. E.g. 20.1.0, 19.3.2. See https://github.com/graalvm/graalvm-ce-builds/releases
+    required: true
+  native-image:
+    description: Install GraalVM Native Image
+    required: false
+    default: false
+runs:
+  using: node12
+  main: dist/index.js

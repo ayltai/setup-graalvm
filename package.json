@@ -1,0 +1,59 @@
+{
+    "name": "setup-graalvm",
+    "version": "1.0.0",
+    "description": "Setup GraalVM action",
+    "author": "Alan Tai",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ayltai/setup-graalvm"
+    },
+    "bugs": {
+        "url": "https://github.com/ayltai/setup-graalvm/issues"
+    },
+    "license": "MIT",
+    "keywords": [
+        "github",
+        "actions",
+        "setup",
+        "graal",
+        "graalvm"
+    ],
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "ncc build src/setup-graalvm.js",
+        "check": "eslint src/*.js",
+        "codecov": "codecov",
+        "test": "jest --testTimeout=8400000 --coverage src/*.test.js"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.10.3",
+        "@babel/plugin-transform-runtime": "^7.10.3",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.1.0",
+        "babel-jest": "^26.0.1",
+        "@zeit/ncc": "^0.22.3",
+        "codecov": "^3.7.0",
+        "eslint": "^7.3.0",
+        "eslint-plugin-async-await": "^0.0.0",
+        "eslint-plugin-es6-recommended": "^0.1.2",
+        "eslint-plugin-import": "^2.21.2",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-standard": "^4.0.1",
+        "jest": "^26.0.1"
+    },
+    "dependencies": {
+        "@actions/core": "^1.2.4",
+        "@actions/exec": "^1.0.4",
+        "@actions/io": "^1.0.2",
+        "@actions/tool-cache": "^1.5.5"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.js?$": "babel-jest"
+        },
+        "testEnvironment": "node"
+    },
+    "engines": {
+        "node": ">=12"
+    }
+}
