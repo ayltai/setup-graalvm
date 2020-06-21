@@ -28,7 +28,7 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Upload coverage report to Codecov
-        uses: npm codecov
+        uses: npm run codecov
       - name: Run SonarCloud scanner
         uses: sonarsource/sonarcloud-github-action@master
         env:
