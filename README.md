@@ -1,7 +1,7 @@
 # GraalVM GitHub action
 
 [![GitHub workflow status](https://img.shields.io/github/workflow/status/ayltai/setup-graalvm/CI?style=flat)](https://github.com/ayltai/setup-graalvm/actions)
-[![Code Quality](https://img.shields.io/codacy/grade/c1c79275ccae4ddfab764041da486271.svg?style=flat)](https://app.codacy.com/app/AlanTai/setup-graalvm/dashboard)
+[![Code Quality](https://img.shields.io/codacy/grade/d7d26464c65348068815d36757c3c0aa.svg?style=flat)](https://app.codacy.com/app/AlanTai/setup-graalvm/dashboard)
 [![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/ayltai_setup-graalvm?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=ayltai_setup-graalvm)
 [![Sonar Violations (short format)](https://img.shields.io/sonar/violations/ayltai_setup-graalvm?format=short&server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=ayltai_setup-graalvm)
 [![Code Coverage](https://img.shields.io/codecov/c/github/ayltai/setup-graalvm.svg?style=flat)](https://codecov.io/gh/ayltai/setup-graalvm)
