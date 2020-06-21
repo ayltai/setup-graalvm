@@ -1,5 +1,4 @@
 import { rmRF, } from '@actions/io';
-import { existsSync, } from 'fs';
 import { join, } from 'path';
 import { arch, } from 'os';
 
@@ -37,11 +36,14 @@ describe('installer', () => {
         const toolPath = await getGraalVM(javaVersion, graalvmVersion, options);
 
         if (process.platform === 'darwin') {
-            expect(process.env[options.javaHome]).toBe(join(toolPath, '/Contents/Home'));
+            expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-darwin-amd64-${graalvmVersion}`, arch()));
+            expect(process.env[ options.javaHome ]).toBe(join(toolPath, '/Contents/Home'));
+        } else if (process.platform === 'win32') {
+            expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-windows-amd64-${graalvmVersion}`, arch()));
+            expect(process.env[options.javaHome]).toBe(toolPath);
         } else {
+            expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-linux-amd64-${graalvmVersion}`, arch()));
             expect(process.env[options.javaHome]).toBe(toolPath);
         }
-
-        expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-darwin-amd64-${graalvmVersion}`, arch()));
     });
 });
