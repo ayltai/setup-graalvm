@@ -20,6 +20,8 @@ This action sets up a GraalVM environment for use in [GitHub](https://github.com
 * optionally downloading [GraalVM Native Image](https://www.graalvm.org/getting-started/#native-images)
 * registering problem matchers for error output
 
+[![Buy me a coffee](https://img.shields.io/static/v1?label=Buy%20me%20a&message=coffee&color=important&style=flat&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoff.ee/ayltai)
+
 ## Usage
 See [action.yaml](https://github.com/ayltai/setup-graalvm/blob/master/action.yml)
 
