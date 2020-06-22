@@ -1,6 +1,9 @@
-name: Setup GraalVM
+name: Setup GraalVM action
 description: Set up a specific version of GraalVM and add the command line tools to PATH
 author: Alan Tai
+branding:
+  icon: box
+  color: orange
 inputs:
   java-version:
     description: The JDK version to be installed with GraalVM. E.g. 8, 11. See https://github.com/graalvm/graalvm-ce-builds/releases
