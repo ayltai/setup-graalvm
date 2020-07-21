@@ -1,6 +1,6 @@
 import { addPath, debug, exportVariable, info, } from '@actions/core';
 import { exec, } from '@actions/exec';
-import { mkdirP, mv, rmRF, } from '@actions/io';
+import { mkdirP, rmRF, } from '@actions/io';
 import { cacheDir, downloadTool, extractTar, extractZip, find, } from '@actions/tool-cache';
 import { readdirSync, statSync, } from 'fs';
 import { join, normalize, } from 'path';
@@ -40,10 +40,7 @@ export const getGraalVM = async (javaVersion, graalvmVersion, options = {}) => {
 
         debug(`${TOOL_NAME} extracted to ${graalvmDir}`);
 
-        let destination = PLATFORM === 'darwin' ? join(options.jvmDir, readdirSync(tempDir)[0]) : graalvmDir;
-        if (PLATFORM === 'darwin') await mv(graalvmDir, destination);
-
-        toolPath = await cacheDir(destination, TOOL_NAME, version);
+        toolPath = await cacheDir(graalvmDir, TOOL_NAME, version);
     }
 
     if (PLATFORM === 'darwin') {
