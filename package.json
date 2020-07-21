@@ -32,7 +32,7 @@
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.0.1",
         "@zeit/ncc": "^0.22.3",
-        "codecov": "^3.7.0",
+        "codecov": "^3.7.1",
         "eslint": "^7.3.0",
         "eslint-plugin-async-await": "^0.0.0",
         "eslint-plugin-es6-recommended": "^0.1.2",
