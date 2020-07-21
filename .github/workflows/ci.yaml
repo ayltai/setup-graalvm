@@ -14,7 +14,7 @@ jobs:
         run: npm i
       - name: Run ESLint
         run: npm run check
-  test:
+  test-linux:
     runs-on: ubuntu-20.04
     steps:
       - name: Git checkout
@@ -36,3 +36,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  test-macOS:
+    runs-on: macos-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: npm i
+      - name: Run tests
+        run: npm test
