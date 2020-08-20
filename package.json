@@ -26,20 +26,20 @@
         "test": "jest --testTimeout=8400000 --coverage src/*.test.js"
     },
     "devDependencies": {
-        "@babel/preset-env": "^7.10.4",
-        "@babel/plugin-transform-runtime": "^7.10.5",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/plugin-transform-runtime": "^7.11.0",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.1.0",
-        "babel-jest": "^26.1.0",
+        "babel-jest": "^26.3.0",
         "@zeit/ncc": "^0.22.3",
-        "codecov": "^3.7.1",
-        "eslint": "^7.5.0",
+        "codecov": "^3.7.2",
+        "eslint": "^7.7.0",
         "eslint-plugin-async-await": "^0.0.0",
         "eslint-plugin-es6-recommended": "^0.1.2",
         "eslint-plugin-import": "^2.22.0",
         "eslint-plugin-node": "^11.1.0",
         "eslint-plugin-standard": "^4.0.1",
-        "jest": "^26.1.0"
+        "jest": "^26.4.1"
     },
     "dependencies": {
         "@actions/core": "^1.2.4",
