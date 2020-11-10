@@ -26,12 +26,12 @@
         "test": "jest --testTimeout=8400000 --coverage src/*.test.js"
     },
     "devDependencies": {
-        "@babel/preset-env": "^7.11.0",
         "@babel/plugin-transform-runtime": "^7.11.0",
+        "@babel/preset-env": "^7.11.0",
+        "@zeit/ncc": "^0.22.3",
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.1.0",
         "babel-jest": "^26.3.0",
-        "@zeit/ncc": "^0.22.3",
         "codecov": "^3.7.2",
         "eslint": "^7.7.0",
         "eslint-plugin-async-await": "^0.0.0",
