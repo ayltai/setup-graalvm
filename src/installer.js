@@ -15,6 +15,7 @@ const OPTIONS = {
     binDir   : 'bin',
     appDir   : '/Contents/Home',
     javaHome : 'JAVA_HOME',
+    graalHome : 'GRAALVM_HOME',
 };
 
 export const getGraalVM = async (javaVersion, graalvmVersion, options = {}) => {
@@ -47,9 +48,11 @@ export const getGraalVM = async (javaVersion, graalvmVersion, options = {}) => {
         await rmRF(tempDir);
 
         exportVariable(options.javaHome, join(toolPath, options.appDir));
+        exportVariable(options.graalHome, join(toolPath, options.appDir));
         addPath(join(toolPath, options.appDir, options.binDir));
     } else {
         exportVariable(options.javaHome, toolPath);
+        exportVariable(options.graalHome, toolPath);
         addPath(join(toolPath, options.binDir));
     }
 
