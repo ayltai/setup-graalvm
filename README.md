@@ -11,7 +11,7 @@
 [![Sonar Tech Debt](https://img.shields.io/sonar/tech_debt/ayltai_setup-graalvm?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/dashboard?id=ayltai_setup-graalvm)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ayltai_setup-graalvm&metric=security_rating)](https://sonarcloud.io/dashboard?id=ayltai_setup-graalvm)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ayltai_setup-graalvm&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ayltai_setup-graalvm)
-![Maintenance](https://img.shields.io/maintenance/yes/2020)
+![Maintenance](https://img.shields.io/maintenance/yes/2021)
 [![Release](https://img.shields.io/github/release/ayltai/setup-graalvm.svg?style=flat)](https://github.com/ayltai/setup-graalvm/releases)
 [![License](https://img.shields.io/github/license/ayltai/setup-graalvm.svg?style=flat)](https://github.com/ayltai/setup-graalvm/blob/master/LICENSE)
 
@@ -32,7 +32,7 @@ steps:
   - uses: ayltai/setup-graalvm@v1
     with:
       java-version: 11
-      graalvm-version: 20.2.0
+      graalvm-version: 21.1.0
       native-image: true
   - run: java -version
 ```
@@ -40,8 +40,8 @@ steps:
 ## Configuration
 | Property          | Required | Default | Description |
 |-------------------|----------|---------|-------------|
-| `java-version`    | Yes      |         | A major Java version. Only `8` and `11` are supported. |
-| `graalvm-version` | Yes      |         | A GraalVM release. Supported values are `20.2.0`, `20.1.0`, `20.0.1`, `20.0.0`, `19.3.2`, `19.3.1`, `19.3.0.2` and `19.3.0`. See [GraalVM releases](https://github.com/graalvm/graalvm-ce-builds/releases) |
+| `java-version`    | Yes      |         | A major Java version. Only `8`, `11` and `16` (targeting GraalVM v21.1.0) are supported. |
+| `graalvm-version` | Yes      |         | A GraalVM release. Supported values are `21.1.0`, `21.0.0.2`, `21.0.0`, `20.3.2`, `20.3.1.2`, `20.3.1`, `20.3.0`, `20.2.0`, `20.1.0`, `20.0.1`, `20.0.0`, `19.3.2`, `19.3.1`, `19.3.0.2` and `19.3.0`. See [GraalVM releases](https://github.com/graalvm/graalvm-ce-builds/releases) |
 | `native-image`    | No       | `false` | `true` to download GraalVM `native-image`. |
 
 ## Spring Boot applications
