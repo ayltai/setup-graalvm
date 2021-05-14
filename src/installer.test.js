@@ -41,6 +41,9 @@ describe('installer', () => {
         } else if (process.platform === 'win32') {
             expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-windows-amd64-${graalvmVersion}`, arch()));
             expect(process.env[options.javaHome]).toBe(toolPath);
+        } else if (process.arch === 'arm64') {
+            expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-linux-aarch64-${graalvmVersion}`, arch()));
+            expect(process.env[options.javaHome]).toBe(toolPath);
         } else {
             expect(toolPath).toBe(join(CACHE_DIR, 'GraalVM', `java${javaVersion}-linux-amd64-${graalvmVersion}`, arch()));
             expect(process.env[options.javaHome]).toBe(toolPath);
